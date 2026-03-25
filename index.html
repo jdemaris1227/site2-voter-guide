@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An independent, sourced voter guide to the 2026 Carroll County State's Attorney race. Side-by-side comparison of Allan Culver Jr. and George Psoras.">
+<title>Carroll County State's Attorney 2026 | Independent Voter Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1a1a18; --ink-mid:#3d3d38; --ink-light:#6b6b64; --paper:#f5f2eb; --paper-dark:#ede9df; --paper-darker:#e0dbd0; --rule:#c8c4b8; --red:#9e2a2a; --blue:#1c3557; --accent:#2d5a8e; --white:#ffffff; }
+  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;}
+  .masthead{background:var(--white);border-bottom:3px double var(--ink);padding:0;}
+  .masthead-top{border-bottom:1px solid var(--rule);padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-family:'Courier Prime',monospace;font-size:11px;color:var(--ink-light);}
+  .masthead-main{padding:24px 40px 20px;text-align:center;border-bottom:1px solid var(--rule);}
+  .masthead-kicker{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;}
+  .masthead-title{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(28px,5vw,52px);font-weight:700;line-height:1.1;color:var(--ink);letter-spacing:-0.02em;}
+  .masthead-sub{font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--ink-light);margin-top:8px;font-weight:300;}
+  .masthead-nav{display:flex;justify-content:center;gap:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;}
+  .masthead-nav a{color:var(--ink-mid);text-decoration:none;padding:10px 20px;border-right:1px solid var(--rule);transition:background 0.15s;}
+  .masthead-nav a:first-child{border-left:1px solid var(--rule);}
+  .masthead-nav a:hover{background:var(--paper-dark);}
+  .lead{background:var(--ink);color:var(--paper);padding:48px 40px;text-align:center;}
+  .lead-label{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--rule);margin-bottom:16px;}
+  .lead h2{font-family:'Libre Baskerville',serif;font-size:clamp(22px,3.5vw,38px);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 16px;}
+  .lead p{font-size:16px;color:rgba(245,242,235,0.7);max-width:640px;margin:0 auto;font-weight:300;line-height:1.7;}
+  .page-inner{max-width:1140px;margin:0 auto;padding:0 40px;}
+  section{padding:60px 0;}
+  .section-rule{border:none;border-top:1px solid var(--rule);margin:0;}
+  .section-label{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-light);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+  .compare-grid{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;margin-top:32px;}
+  @media(max-width:768px){.compare-grid{grid-template-columns:1fr;}.compare-divider{display:none;}}
+  .compare-divider{display:flex;align-items:stretch;justify-content:center;}
+  .compare-divider-line{width:1px;background:var(--rule);}
+  .candidate-col{padding:32px;background:var(--white);border:1px solid var(--rule);}
+  .candidate-col.challenger{border-left:3px solid var(--blue);}
+  .candidate-col.incumbent{border-left:3px solid var(--red);}
+  .cand-badge{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px;display:inline-block;margin-bottom:14px;}
+  .badge-challenger{background:var(--blue);color:white;}
+  .badge-incumbent{background:var(--red);color:white;}
+  .cand-name{font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .cand-party{font-size:13px;color:var(--ink-light);font-family:'Courier Prime',monospace;margin-bottom:20px;}
+  .cand-photo{width:90px;height:90px;border-radius:3px;background:var(--paper-darker);margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;color:var(--ink-light);border:1px solid var(--rule);overflow:hidden;}
+  .cand-photo img{width:100%;height:100%;object-fit:cover;object-position:top;}
+  .cand-tagline{font-family:'Libre Baskerville',serif;font-style:italic;font-size:15px;color:var(--ink-mid);margin-bottom:20px;padding-left:12px;border-left:3px solid var(--rule);line-height:1.5;}
+  .cand-bio{font-size:14px;line-height:1.75;color:var(--ink-mid);font-weight:300;}
+  .issues-section{background:var(--paper-dark);}
+  .issues-header{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;background:var(--ink);color:var(--paper);font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;}
+  .issues-header div{padding:12px 20px;border-right:1px solid rgba(255,255,255,0.1);}
+  .issue-row{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border-bottom:1px solid var(--rule);background:var(--white);}
+  .issue-row:nth-child(even){background:var(--paper);}
+  .issue-topic{padding:20px;border-right:1px solid var(--rule);font-family:'Courier Prime',monospace;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);display:flex;align-items:flex-start;background:var(--paper-darker);}
+  .issue-cell{padding:20px;border-right:1px solid var(--rule);font-size:14px;line-height:1.65;color:var(--ink-mid);font-weight:300;}
+  .issue-cell strong{color:var(--ink);font-weight:600;}
+  .issue-cell .verdict{display:inline-block;margin-top:8px;padding:3px 8px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;}
+  .verdict-positive{background:rgba(28,53,87,0.12);color:var(--blue);}
+  .verdict-negative{background:rgba(158,42,42,0.1);color:var(--red);}
+  .verdict-neutral{background:rgba(107,107,100,0.12);color:var(--ink-light);}
+  @media(max-width:700px){.issues-header,.issue-row{grid-template-columns:1fr;}.issue-topic{background:var(--ink);color:var(--paper);}}
+
+  /* SCANDAL DETAIL */
+  .scandal-detail{background:var(--ink);}
+  .scandal-detail h2{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,44px);color:var(--paper);margin-bottom:16px;}
+  .sd-intro{font-size:16px;color:rgba(245,242,235,0.65);max-width:680px;margin-bottom:40px;font-weight:300;line-height:1.7;}
+  .sd-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-bottom:40px;}
+  .sd-fact{background:rgba(255,255,255,0.04);padding:24px;border-top:2px solid rgba(200,151,58,0.4);}
+  .sd-fact-num{font-family:'Libre Baskerville',serif;font-size:42px;font-weight:700;color:rgba(200,151,58,0.5);line-height:1;margin-bottom:8px;}
+  .sd-fact h3{font-family:'Libre Baskerville',serif;font-size:17px;color:rgba(245,242,235,0.9);margin-bottom:8px;}
+  .sd-fact p{font-size:13px;color:rgba(245,242,235,0.55);line-height:1.65;font-weight:300;}
+  .sd-quote{max-width:720px;padding:24px 28px;background:rgba(255,255,255,0.06);border-left:3px solid rgba(200,151,58,0.5);margin-top:8px;}
+  .sd-quote p{font-size:16px;font-style:italic;color:rgba(245,242,235,0.8);line-height:1.7;}
+  .sd-quote cite{display:block;margin-top:10px;font-style:normal;font-family:'Courier Prime',monospace;font-size:10px;color:rgba(200,151,58,0.7);letter-spacing:0.08em;}
+
+  .record-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px;}
+  @media(max-width:700px){.record-grid{grid-template-columns:1fr;}}
+  .record-card{background:var(--white);border:1px solid var(--rule);padding:28px;}
+  .record-card h3{font-family:'Libre Baskerville',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--rule);}
+  .record-card ul{list-style:none;padding:0;}
+  .record-card li{font-size:14px;line-height:1.65;color:var(--ink-mid);padding:8px 0;border-bottom:1px solid var(--paper-dark);display:flex;gap:10px;font-weight:300;}
+  .record-card li::before{content:'▸';color:var(--ink-light);flex-shrink:0;margin-top:2px;}
+  .record-card li.concern::before{content:'✗';color:var(--red);}
+  .record-card li.positive::before{content:'✓';color:var(--blue);}
+
+  .chat-section{background:var(--ink);padding:60px 40px;}
+  .chat-section h2{font-family:'Libre Baskerville',serif;font-size:28px;color:var(--paper);margin-bottom:8px;}
+  .chat-section p{font-size:15px;color:rgba(245,242,235,0.6);margin-bottom:32px;font-weight:300;}
+  .chat-wrap{max-width:680px;}
+  .chat-box{background:#12120f;border:1px solid rgba(200,196,184,0.15);border-radius:4px;overflow:hidden;}
+  .chat-hdr{background:rgba(255,255,255,0.04);padding:14px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(200,196,184,0.1);font-family:'Courier Prime',monospace;font-size:12px;color:var(--rule);letter-spacing:0.08em;}
+  .chat-dot{width:8px;height:8px;border-radius:50%;background:#4caf84;box-shadow:0 0 6px rgba(76,175,132,0.5);}
+  .chat-msgs{height:340px;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px;}
+  .chat-msgs::-webkit-scrollbar{width:3px;}
+  .chat-msgs::-webkit-scrollbar-thumb{background:rgba(200,196,184,0.2);}
+  .cm{display:flex;gap:8px;animation:fadeUp 0.3s ease;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .cm.user{flex-direction:row-reverse;}
+  .cm-bubble{max-width:78%;padding:10px 14px;font-size:13px;line-height:1.6;border-radius:3px;}
+  .cm.bot .cm-bubble{background:rgba(255,255,255,0.06);color:rgba(245,242,235,0.82);border:1px solid rgba(200,196,184,0.08);}
+  .cm.user .cm-bubble{background:var(--accent);color:white;}
+  .cm-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:2px;}
+  .cm.bot .cm-icon{background:rgba(255,255,255,0.08);color:var(--rule);}
+  .cm.user .cm-icon{background:rgba(45,90,142,0.4);color:var(--rule);}
+  .typing-ind{display:flex;gap:4px;padding:4px 2px;}
+  .td{width:5px;height:5px;border-radius:50%;background:var(--rule);opacity:0.4;animation:bounce 1.2s infinite;}
+  .td:nth-child(2){animation-delay:0.2s}.td:nth-child(3){animation-delay:0.4s}
+  @keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:0.4}30%{transform:translateY(-4px);opacity:0.9}}
+  .chat-qr{padding:10px 16px;border-top:1px solid rgba(200,196,184,0.08);display:flex;gap:6px;flex-wrap:wrap;background:rgba(255,255,255,0.02);}
+  .qr{padding:5px 12px;background:transparent;border:1px solid rgba(200,196,184,0.2);border-radius:20px;font-family:'Courier Prime',monospace;font-size:11px;color:rgba(245,242,235,0.55);cursor:pointer;transition:all 0.2s;}
+  .qr:hover{border-color:rgba(200,196,184,0.5);color:var(--paper);}
+  .chat-input-row{display:flex;border-top:1px solid rgba(200,196,184,0.1);}
+  .ci{flex:1;padding:14px 16px;background:transparent;border:none;outline:none;font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--paper);caret-color:var(--accent);}
+  .ci::placeholder{color:rgba(245,242,235,0.25);}
+  .cs{padding:12px 16px;background:var(--accent);border:none;cursor:pointer;color:white;font-size:14px;transition:background 0.2s;}
+  .cs:hover{background:var(--blue);}
+
+  .sources-section{background:var(--paper-dark);padding:40px;border-top:2px solid var(--ink);}
+  .sources-section h3{font-family:'Libre Baskerville',serif;font-size:16px;margin-bottom:16px;color:var(--ink);}
+  .source-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+  .source-item{font-size:12px;font-family:'Courier Prime',monospace;color:var(--ink-light);padding:8px 12px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--accent);}
+  .source-item a{color:var(--accent);text-decoration:none;}
+  .source-item a:hover{text-decoration:underline;}
+  footer{background:var(--ink);padding:32px 40px;text-align:center;}
+  .footer-disc{font-family:'Courier Prime',monospace;font-size:11px;color:rgba(245,242,235,0.3);line-height:1.8;max-width:700px;margin:0 auto;}
+  @media(max-width:640px){.masthead-top,.masthead-main,.page-inner{padding-left:20px;padding-right:20px;}.masthead-nav{flex-wrap:wrap;}section{padding:40px 0;}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span>Carroll County, Maryland</span>
+    <span>2026 ELECTION VOTER GUIDE</span>
+    <span>Independent · Sourced · Factual</span>
+  </div>
+  <div class="masthead-main">
+    <div class="masthead-kicker">Independent Voter Guide · 2026</div>
+    <div class="masthead-title">Carroll County State's Attorney</div>
+    <div class="masthead-sub">A factual, sourced comparison of the 2026 candidates — everything voters need to make an informed decision</div>
+  </div>
+  <nav class="masthead-nav">
+    <a href="#candidates">The Candidates</a>
+    <a href="#issues">Issue by Issue</a>
+    <a href="#scandal">The Buenger Scandal</a>
+    <a href="#record">The Record</a>
+    <a href="#ask">Ask Questions</a>
+    <a href="#vote">How to Vote</a>
+  </nav>
+</header>
+
+<div class="lead">
+  <div class="lead-label">Why This Race Matters</div>
+  <h2>The State's Attorney is the most powerful law enforcement officer in Carroll County.</h2>
+  <p>This office decides who gets charged, what charges are filed, and how aggressively cases are pursued. The 2026 race pits an incumbent with a documented record of evidence non-disclosure against a challenger committed to transparency and accountability. Here are the facts.</p>
+</div>
+
+<section id="candidates">
+  <div class="page-inner">
+    <div class="section-label">The Candidates</div>
+    <div class="compare-grid">
+      <div class="candidate-col challenger">
+        <div class="cand-badge badge-challenger">Challenger</div>
+        <div class="cand-photo"><img src="https://opposeallanculver.com/wp-content/uploads/2025/12/psoras-headshot.jpg" alt="George Psoras" onerror="this.parentElement.innerHTML='GP'"></div>
+        <div class="cand-name">George Psoras</div>
+        <div class="cand-party">Republican Challenger · Carroll County State's Attorney</div>
+        <div class="cand-tagline">"Making Crime Illegal Again in Carroll County — justice for victims, accountability for all."</div>
+        <p class="cand-bio">George Psoras is challenging the incumbent with a platform centered on prosecutorial integrity, community safety, and restoring public trust. He has committed to full Brady Rule compliance, relentless prosecution of violent offenders, tackling the opioid epidemic, and supporting the transparency reforms Culver has opposed.</p>
+      </div>
+      <div class="compare-divider"><div class="compare-divider-line"></div></div>
+      <div class="candidate-col incumbent">
+        <div class="cand-badge badge-incumbent">Incumbent</div>
+        <div class="cand-photo">AC</div>
+        <div class="cand-name">Allan Culver Jr.</div>
+        <div class="cand-party">Incumbent · Carroll County State's Attorney</div>
+        <div class="cand-tagline">"Career prosecutor with 23 years of experience."</div>
+        <p class="cand-bio">Allan Culver Jr. is the sitting State's Attorney seeking re-election. During his time as Acting SA in 2021–2022, all four Carroll County Circuit Court judges banned him from their courtrooms after he failed to disclose credibility concerns about a sheriff's deputy to defense attorneys — a Brady Rule violation. One defendant's conviction was overturned. He opposed two Maryland transparency reform bills. He was declared "cleared" by his own boss — the man he personally endorsed — not by an independent investigation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="issues" class="issues-section">
+  <div class="page-inner">
+    <div class="section-label">Issue by Issue Breakdown</div>
+    <div class="issues-header">
+      <div>Issue</div><div>George Psoras</div><div>Allan Culver Jr.</div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Brady Rule & Evidence Disclosure</div>
+      <div class="issue-cell">Committed to full Brady compliance. Pledges mandatory evidence-sharing and an open, transparent prosecutorial office.<br><span class="verdict verdict-positive">Full Compliance Pledged</span></div>
+      <div class="issue-cell">As Acting SA, <strong>failed to disclose credibility concerns about a sheriff's deputy to defense attorneys</strong> — a documented Brady violation. All four circuit court judges banned him from their courtrooms. One conviction overturned.<br><span class="verdict verdict-negative">Documented Violation</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Accountability & Independent Oversight</div>
+      <div class="issue-cell">Supports independent oversight mechanisms, transparency reforms, and public accountability for prosecutorial decisions.<br><span class="verdict verdict-positive">Pro-Accountability</span></div>
+      <div class="issue-cell">Personally opposed <strong>Senate Bill 896</strong> (independent oversight of police-involved incidents) calling it "irrelevant," and <strong>Senate Bill 763</strong> (public data collection on prosecutorial decisions). Both on the public legislative record.<br><span class="verdict verdict-negative">Opposed Both Bills</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Prosecutorial Conduct</div>
+      <div class="issue-cell">Has pledged to charge cases only where evidence is sufficient and to pursue justice over conviction statistics.<br><span class="verdict verdict-positive">Integrity Platform</span></div>
+      <div class="issue-cell">Carroll County small business owners and community members have documented experiences of prosecutorial overreach. A PAC was formed specifically in response. In 2022, a legal opponent publicly called for his resignation over disclosure failures.<br><span class="verdict verdict-negative">Documented Concerns</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Community Safety & Opioid Crisis</div>
+      <div class="issue-cell">Made the opioid epidemic a cornerstone platform issue. Commits to tackling addiction with both enforcement and compassion.<br><span class="verdict verdict-positive">Specific Platform</span></div>
+      <div class="issue-cell">Record on drug addiction cases has been criticized by community advocates. The "Anthony's Way" organization — founded after a community member's death — has documented concerns about how addiction-related cases were handled.<br><span class="verdict verdict-neutral">Record Questioned</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Victim Support</div>
+      <div class="issue-cell">Explicitly commits to treating victims and witnesses with compassion and empowering Carroll County communities in public safety efforts.<br><span class="verdict verdict-positive">Explicit Commitment</span></div>
+      <div class="issue-cell">No comparable public commitment to victim advocacy or community safety empowerment as a platform priority.<br><span class="verdict verdict-neutral">No Public Commitment</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- SCANDAL DETAIL -->
+<section class="scandal-detail" id="scandal">
+  <div class="page-inner">
+    <div class="section-label" style="color:rgba(245,242,235,0.4)">Documented Incident — Sourced from Court Records and News Reporting</div>
+    <h2>The Buenger Scandal: What Carroll County Voters Should Know</h2>
+    <p class="sd-intro">In 2022, Carroll County's own circuit court judges took the extraordinary step of banning the sitting Acting State's Attorney from their courtrooms. Here are the documented facts.</p>
+
+    <div class="sd-facts">
+      <div class="sd-fact">
+        <div class="sd-fact-num">4</div>
+        <h3>Circuit Court Judges</h3>
+        <p>All four sitting Carroll County Circuit Court judges unanimously announced they would refuse to hear cases involving Culver — an action described as extraordinary and nearly unprecedented.</p>
+      </div>
+      <div class="sd-fact">
+        <div class="sd-fact-num">1</div>
+        <h3>Conviction Overturned</h3>
+        <p>A man who had pleaded guilty to drug charges was cleared and had his case thrown out after the non-disclosure came to light.</p>
+      </div>
+      <div class="sd-fact">
+        <div class="sd-fact-num">4+</div>
+        <h3>People Held Without Bond</h3>
+        <p>At least four people were held in jail without bond in cases involving the deputy while Culver sat on credibility information he was required to disclose.</p>
+      </div>
+      <div class="sd-fact">
+        <div class="sd-fact-num">0</div>
+        <h3>Press Calls Returned</h3>
+        <p>Culver did not return multiple requests for comment from the Baltimore Banner or Baltimore Sun. His office referred questions to a senior staff attorney who also did not respond.</p>
+      </div>
+    </div>
+
+    <div class="sd-quote">
+      <p>"I was hoping that the information in today's hearing would clear things up so I didn't have concerns. If anything, my concerns are magnified."</p>
+      <cite>— Circuit Court Judge Richard R. Titus, May 27, 2022, after hearing sworn testimony about Culver's conduct</cite>
+    </div>
+    <div class="sd-quote" style="margin-top:12px">
+      <p>"Prosecutors are required to seek out misconduct and disclose it, which they egregiously failed to do here."</p>
+      <cite>— Natasha Dartigue, Maryland Public Defender Designate, June 2022</cite>
+    </div>
+
+    <p style="margin-top:32px;font-size:14px;color:rgba(245,242,235,0.45);font-family:'Courier Prime',monospace">Sources: Baltimore Banner (June 6, 2022) · Baltimore Sun (June 15, 2022) · Capital Gazette (October 23, 2023) · Carroll County Board of Elections · Maryland General Assembly testimony archive</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="record">
+  <div class="page-inner">
+    <div class="section-label">Documented Record</div>
+    <div class="record-grid">
+      <div class="record-card">
+        <h3>Allan Culver Jr. — Documented Concerns</h3>
+        <ul>
+          <li class="concern">Failed to disclose deputy's credibility issues to defense attorneys as required by the Brady Rule</li>
+          <li class="concern">All four Carroll County Circuit Court judges banned him from their courtrooms (June 2022)</li>
+          <li class="concern">One defendant's conviction overturned; at least four held without bond in affected cases</li>
+          <li class="concern">His own prosecutor Jennifer Brady warned him repeatedly — he called the evidence a "rumor"</li>
+          <li class="concern">Opposed Maryland SB 896 — independent oversight of police-involved incidents</li>
+          <li class="concern">Opposed Maryland SB 763 — public data collection on prosecutorial decisions</li>
+          <li class="concern">Declared "cleared" by his own boss (Haven Shoemaker), not an independent investigation</li>
+          <li class="concern">Chose not to run in 2022 primary — held weeks after the judges banned him</li>
+          <li class="concern">Carroll County NAACP publicly called for investigation of other affected cases</li>
+        </ul>
+      </div>
+      <div class="record-card">
+        <h3>George Psoras — Platform Commitments</h3>
+        <ul>
+          <li class="positive">Full Brady Rule compliance — mandatory evidence disclosure, no exceptions</li>
+          <li class="positive">Relentless prosecution of violent offenders and organized crime</li>
+          <li class="positive">Specific opioid epidemic action plan for Carroll County</li>
+          <li class="positive">Treating victims and witnesses with compassion — victim support as a priority</li>
+          <li class="positive">Empowering local neighborhoods and community organizations</li>
+          <li class="positive">Supports independent oversight and transparency reforms</li>
+          <li class="positive">Endorsed by Carroll County Small Businesses PAC</li>
+          <li class="positive">Pledges publicly accountable prosecutorial decision-making</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="vote">
+  <div class="page-inner">
+    <div class="section-label">How to Vote in Carroll County</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:16px;">
+      <div style="background:var(--white);border:1px solid var(--rule);padding:24px;">
+        <div style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;">Find Your Polling Place</div>
+        <p style="font-size:14px;color:var(--ink-mid);font-weight:300;margin-bottom:12px;">Use the Maryland State Board of Elections lookup tool to find your assigned polling location.</p>
+        <a href="https://elections.maryland.gov/voter_registration/lookup.html" target="_blank" style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--accent);text-decoration:underline;">elections.maryland.gov →</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--rule);padding:24px;">
+        <div style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;">Carroll County Board of Elections</div>
+        <p style="font-size:14px;color:var(--ink-mid);font-weight:300;margin-bottom:12px;">For voter registration, absentee ballots, and local election questions.</p>
+        <span style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--accent);">410-386-2972</span>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--rule);padding:24px;">
+        <div style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;">Verify Your Registration</div>
+        <p style="font-size:14px;color:var(--ink-mid);font-weight:300;margin-bottom:12px;">Confirm your registration is current before election day.</p>
+        <a href="https://elections.maryland.gov/voter_registration/lookup.html" target="_blank" style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--accent);text-decoration:underline;">Verify Registration →</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--rule);padding:24px;">
+        <div style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;">Further Research</div>
+        <p style="font-size:14px;color:var(--ink-mid);font-weight:300;margin-bottom:12px;">For deeper documentation of the concerns raised in this guide.</p>
+        <a href="https://opposeallanculver.com" target="_blank" style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--accent);text-decoration:underline;">opposeallanculver.com →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="chat-section" id="ask">
+  <div class="chat-wrap">
+    <div class="section-label" style="color:rgba(245,242,235,0.4)">Voter Questions</div>
+    <h2>Questions about the race?</h2>
+    <p>Our AI assistant can answer factual questions about both candidates, explain the Buenger scandal, describe Brady Rule obligations, and help you find Carroll County election information.</p>
+    <div class="chat-box">
+      <div class="chat-hdr"><div class="chat-dot"></div>VOTER GUIDE ASSISTANT · CARROLL COUNTY 2026</div>
+      <div class="chat-msgs" id="chatMsgs">
+        <div class="cm bot"><div class="cm-icon">⚖</div><div class="cm-bubble">Welcome to the Carroll County State's Attorney Voter Guide. I can answer questions about either candidate's record, explain the Buenger scandal and Brady Rule, help you find your polling place, or point you to additional sources. What would you like to know?</div></div>
+      </div>
+      <div class="chat-qr" id="chatQR">
+        <button class="qr" onclick="sq('What happened in the Buenger scandal?')">The Buenger scandal</button>
+        <button class="qr" onclick="sq('Why is Culver\\'s cleared claim misleading?')">The cleared claim</button>
+        <button class="qr" onclick="sq('What is the Brady Rule?')">Brady Rule explained</button>
+        <button class="qr" onclick="sq('What is Psoras\\' platform?')">Psoras platform</button>
+        <button class="qr" onclick="sq('How do I find my polling place in Carroll County?')">Find polling place</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" class="ci" id="chatIn" placeholder="Ask a factual question about the race..." onkeydown="if(event.key==='Enter') sendChat()">
+        <button class="cs" onclick="sendChat()">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sources-section">
+  <div class="page-inner">
+    <h3>Sources & Further Reading</h3>
+    <div class="source-list">
+      <div class="source-item">Baltimore Banner — <a href="https://www.thebaltimorebanner.com" target="_blank">Buenger Scandal Coverage (June 2022)</a></div>
+      <div class="source-item">Baltimore Sun — <a href="https://www.baltimoresun.com" target="_blank">Judges Refuse Cases / Prosecutors Cleared</a></div>
+      <div class="source-item">Capital Gazette — <a href="https://www.capitalgazette.com" target="_blank">Cleared Statement (October 2023)</a></div>
+      <div class="source-item">Maryland Legislature — <a href="https://mgaleg.maryland.gov" target="_blank">SB 896 & SB 763 Testimony (Culver, 2022)</a></div>
+      <div class="source-item">Carroll County Board of Elections — <a href="https://elections.carrollcountymd.gov" target="_blank">elections.carrollcountymd.gov</a></div>
+      <div class="source-item">Oppose Allan Culver — <a href="https://opposeallanculver.com" target="_blank">opposeallanculver.com</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-disc">Paid for by Carroll County Small Businesses PAC. Not authorized by any candidate or candidate's committee.<br>This site presents factual, sourced information for voter education. All documented claims are sourced above.<br>Carroll County Small Businesses PAC · 2026</p>
+</footer>
+
+<script>
+const voterGuideSystem = `You are a factual, neutral-toned voter guide assistant for the Carroll County, Maryland 2026 State's Attorney race.
+
+THE BUENGER SCANDAL:
+In February 2022, Acting State's Attorney Allan Culver and Deputy SA Edward Coyne were informed by their own prosecutor Jennifer Brady that Sheriff's Deputy Sean Buenger had serious credibility issues — state troopers had given him a fake drug house address and he'd written a fraudulent search warrant affidavit. Brady warned Culver REPEATEDLY. At least four people were held in jail without bond in Buenger cases. Culver called the evidence a "rumor" and took no action. In May 2022, Circuit Court Judge Richard Titus held a hearing where Brady testified under oath. Judge Titus said: "If anything, my concerns are magnified." On June 1, 2022, ALL FOUR Carroll County Circuit Court judges banned Culver from their courtrooms. One defendant's conviction was overturned. The Maryland Public Defender called it an "egregious failure."
+
+THE CLEARED CLAIM:
+The Maryland State Prosecutor investigated Deputy Buenger — NOT Culver. The Buenger finding was "inconclusive." Culver was declared "cleared" by Haven Shoemaker — his own boss and the man he had personally endorsed in the 2022 race. That is NOT an independent investigation. The judges acted on sworn testimony and that decision was never reversed.
+
+LEGISLATIVE RECORD:
+Culver opposed SB 896 (independent oversight of police incidents, called it "irrelevant") and SB 763 (public data collection on prosecutorial decisions). Both on public record at mgaleg.maryland.gov.
+
+PSORAS PLATFORM: Full Brady compliance, prosecute violent offenders, tackle opioid crisis, victim compassion, support oversight reforms, "Making Crime Illegal Again in Carroll County."
+
+VOTING: https://elections.maryland.gov/voter_registration/lookup.html · 410-386-2972
+
+TONE: Factual, informative, balanced presentation. 2-3 paragraphs max. Always encourage voting.`;
+
+const hist = [];
+async function callAI(msg) {
+  hist.push({role:'user',content:msg});
+  const r = await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:voterGuideSystem,messages:hist})});
+  const d = await r.json();
+  const reply = d.content?.[0]?.text || 'Connection error. Please try again.';
+  hist.push({role:'assistant',content:reply});
+  return reply;
+}
+function addMsg(role,text){const c=document.getElementById('chatMsgs');const d=document.createElement('div');d.className=`cm ${role}`;const icon=role==='bot'?'⚖':'◉';d.innerHTML=`<div class="cm-icon">${icon}</div><div class="cm-bubble">${text.replace(/\n/g,'<br>')}</div>`;c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function showTyping(){const c=document.getElementById('chatMsgs');const d=document.createElement('div');d.className='cm bot';d.id='typing';d.innerHTML=`<div class="cm-icon">⚖</div><div class="cm-bubble"><div class="typing-ind"><div class="td"></div><div class="td"></div><div class="td"></div></div></div>`;c.appendChild(d);c.scrollTop=c.scrollHeight;}
+function removeTyping(){const e=document.getElementById('typing');if(e)e.remove();}
+async function sendChat(){const i=document.getElementById('chatIn');const t=i.value.trim();if(!t)return;i.value='';document.getElementById('chatQR').style.display='none';addMsg('user',t);showTyping();try{const r=await callAI(t);removeTyping();addMsg('bot',r);}catch(e){removeTyping();addMsg('bot','Connection error. Please try again.');}}
+function sq(t){document.getElementById('chatIn').value=t;sendChat();}
+</script>
+</body>
+</html>
