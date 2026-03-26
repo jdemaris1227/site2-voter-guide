@@ -397,7 +397,7 @@ TONE: Factual, informative, balanced presentation. 2-3 paragraphs max. Always en
 const hist = [];
 async function callAI(msg) {
   hist.push({role:'user',content:msg});
-  const r = await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:voterGuideSystem,messages:hist})});
+  const r = await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:voterGuideSystem,messages:hist})});
   const d = await r.json();
   const reply = d.content?.[0]?.text || 'Connection error. Please try again.';
   hist.push({role:'assistant',content:reply});
