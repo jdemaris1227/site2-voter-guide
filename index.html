@@ -10,25 +10,25 @@
 <style>
   :root { --ink:#1a1a18; --ink-mid:#3d3d38; --ink-light:#6b6b64; --paper:#f5f2eb; --paper-dark:#ede9df; --paper-darker:#e0dbd0; --rule:#c8c4b8; --red:#9e2a2a; --blue:#1c3557; --accent:#2d5a8e; --white:#ffffff; }
   *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-  body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--ink);font-size:18px;line-height:1.8;}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;}
   .masthead{background:var(--white);border-bottom:3px double var(--ink);padding:0;}
-  .masthead-top{border-bottom:1px solid var(--rule);padding:10px 40px;display:flex;justify-content:space-between;align-items:center;font-family:'Courier Prime',monospace;font-size:13px;color:var(--ink-mid);}
+  .masthead-top{border-bottom:1px solid var(--rule);padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-family:'Courier Prime',monospace;font-size:11px;color:var(--ink-light);}
   .masthead-main{padding:24px 40px 20px;text-align:center;border-bottom:1px solid var(--rule);}
-  .masthead-kicker{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mid);margin-bottom:8px;}
+  .masthead-kicker{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-light);margin-bottom:8px;}
   .masthead-title{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(28px,5vw,52px);font-weight:700;line-height:1.1;color:var(--ink);letter-spacing:-0.02em;}
-  .masthead-sub{font-family:'Source Sans 3',sans-serif;font-size:17px;color:var(--ink-mid);margin-top:8px;font-weight:400;}
-  .masthead-nav{display:flex;justify-content:center;gap:0;font-family:'Courier Prime',monospace;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;}
+  .masthead-sub{font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--ink-light);margin-top:8px;font-weight:300;}
+  .masthead-nav{display:flex;justify-content:center;gap:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;}
   .masthead-nav a{color:var(--ink-mid);text-decoration:none;padding:10px 20px;border-right:1px solid var(--rule);transition:background 0.15s;}
   .masthead-nav a:first-child{border-left:1px solid var(--rule);}
   .masthead-nav a:hover{background:var(--paper-dark);}
   .lead{background:var(--ink);color:var(--paper);padding:48px 40px;text-align:center;}
-  .lead-label{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--rule);margin-bottom:16px;}
+  .lead-label{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--rule);margin-bottom:16px;}
   .lead h2{font-family:'Libre Baskerville',serif;font-size:clamp(22px,3.5vw,38px);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 16px;}
-  .lead p{font-size:18px;color:rgba(245,242,235,0.88);max-width:640px;margin:0 auto;font-weight:400;line-height:1.7;}
+  .lead p{font-size:16px;color:rgba(245,242,235,0.7);max-width:640px;margin:0 auto;font-weight:300;line-height:1.7;}
   .page-inner{max-width:1140px;margin:0 auto;padding:0 40px;}
   section{padding:60px 0;}
   .section-rule{border:none;border-top:1px solid var(--rule);margin:0;}
-  .section-label{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-light);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+  .section-label{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-light);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
   .section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
   .compare-grid{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;margin-top:32px;}
   @media(max-width:768px){.compare-grid{grid-template-columns:1fr;}.compare-divider{display:none;}}
@@ -37,24 +37,24 @@
   .candidate-col{padding:32px;background:var(--white);border:1px solid var(--rule);}
   .candidate-col.challenger{border-left:3px solid var(--blue);}
   .candidate-col.incumbent{border-left:3px solid var(--red);}
-  .cand-badge{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px;display:inline-block;margin-bottom:14px;}
+  .cand-badge{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;border-radius:2px;display:inline-block;margin-bottom:14px;}
   .badge-challenger{background:var(--blue);color:white;}
   .badge-incumbent{background:var(--red);color:white;}
   .cand-name{font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;color:var(--ink);margin-bottom:4px;}
-  .cand-party{font-size:15px;color:var(--ink-mid);font-family:'Courier Prime',monospace;margin-bottom:20px;}
+  .cand-party{font-size:13px;color:var(--ink-light);font-family:'Courier Prime',monospace;margin-bottom:20px;}
   .cand-photo{width:90px;height:90px;border-radius:3px;background:var(--paper-darker);margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;color:var(--ink-light);border:1px solid var(--rule);overflow:hidden;}
   .cand-photo img{width:100%;height:100%;object-fit:cover;object-position:top;}
-  .cand-tagline{font-family:'Libre Baskerville',serif;font-style:italic;font-size:17px;color:var(--ink);margin-bottom:20px;padding-left:12px;border-left:3px solid var(--rule);line-height:1.6;}
-  .cand-bio{font-size:16px;line-height:1.75;color:var(--ink);font-weight:400;}
+  .cand-tagline{font-family:'Libre Baskerville',serif;font-style:italic;font-size:15px;color:var(--ink-mid);margin-bottom:20px;padding-left:12px;border-left:3px solid var(--rule);line-height:1.5;}
+  .cand-bio{font-size:14px;line-height:1.75;color:var(--ink-mid);font-weight:300;}
   .issues-section{background:var(--paper-dark);}
-  .issues-header{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;background:var(--ink);color:var(--paper);font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;}
+  .issues-header{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;background:var(--ink);color:var(--paper);font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;}
   .issues-header div{padding:12px 20px;border-right:1px solid rgba(255,255,255,0.1);}
   .issue-row{display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border-bottom:1px solid var(--rule);background:var(--white);}
   .issue-row:nth-child(even){background:var(--paper);}
-  .issue-topic{padding:20px;border-right:1px solid var(--rule);font-family:'Courier Prime',monospace;font-size:14px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);display:flex;align-items:flex-start;background:var(--paper-darker);}
-  .issue-cell{padding:20px;border-right:1px solid var(--rule);font-size:16px;line-height:1.7;color:var(--ink);font-weight:400;}
+  .issue-topic{padding:20px;border-right:1px solid var(--rule);font-family:'Courier Prime',monospace;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);display:flex;align-items:flex-start;background:var(--paper-darker);}
+  .issue-cell{padding:20px;border-right:1px solid var(--rule);font-size:14px;line-height:1.65;color:var(--ink-mid);font-weight:300;}
   .issue-cell strong{color:var(--ink);font-weight:600;}
-  .issue-cell .verdict{display:inline-block;margin-top:8px;padding:4px 10px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;}
+  .issue-cell .verdict{display:inline-block;margin-top:8px;padding:3px 8px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;}
   .verdict-positive{background:rgba(28,53,87,0.12);color:var(--blue);}
   .verdict-negative{background:rgba(158,42,42,0.1);color:var(--red);}
   .verdict-neutral{background:rgba(107,107,100,0.12);color:var(--ink-light);}
@@ -63,29 +63,29 @@
   /* SCANDAL DETAIL */
   .scandal-detail{background:var(--ink);}
   .scandal-detail h2{font-family:'Libre Baskerville',serif;font-size:clamp(28px,4vw,44px);color:var(--paper);margin-bottom:16px;}
-  .sd-intro{font-size:18px;color:rgba(245,242,235,0.88);max-width:680px;margin-bottom:40px;font-weight:400;line-height:1.7;}
+  .sd-intro{font-size:16px;color:rgba(245,242,235,0.65);max-width:680px;margin-bottom:40px;font-weight:300;line-height:1.7;}
   .sd-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-bottom:40px;}
   .sd-fact{background:rgba(255,255,255,0.04);padding:24px;border-top:2px solid rgba(200,151,58,0.4);}
   .sd-fact-num{font-family:'Libre Baskerville',serif;font-size:42px;font-weight:700;color:rgba(200,151,58,0.5);line-height:1;margin-bottom:8px;}
-  .sd-fact h3{font-family:'Libre Baskerville',serif;font-size:19px;color:rgba(245,242,235,0.95);margin-bottom:8px;}
-  .sd-fact p{font-size:15px;color:rgba(245,242,235,0.8);line-height:1.7;font-weight:400;}
+  .sd-fact h3{font-family:'Libre Baskerville',serif;font-size:17px;color:rgba(245,242,235,0.9);margin-bottom:8px;}
+  .sd-fact p{font-size:13px;color:rgba(245,242,235,0.55);line-height:1.65;font-weight:300;}
   .sd-quote{max-width:720px;padding:24px 28px;background:rgba(255,255,255,0.06);border-left:3px solid rgba(200,151,58,0.5);margin-top:8px;}
-  .sd-quote p{font-size:18px;font-style:italic;color:rgba(245,242,235,0.92);line-height:1.7;}
-  .sd-quote cite{display:block;margin-top:10px;font-style:normal;font-family:'Courier Prime',monospace;font-size:12px;color:rgba(200,151,58,0.85);letter-spacing:0.08em;}
+  .sd-quote p{font-size:16px;font-style:italic;color:rgba(245,242,235,0.8);line-height:1.7;}
+  .sd-quote cite{display:block;margin-top:10px;font-style:normal;font-family:'Courier Prime',monospace;font-size:10px;color:rgba(200,151,58,0.7);letter-spacing:0.08em;}
 
   .record-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px;}
   @media(max-width:700px){.record-grid{grid-template-columns:1fr;}}
   .record-card{background:var(--white);border:1px solid var(--rule);padding:28px;}
   .record-card h3{font-family:'Libre Baskerville',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--rule);}
   .record-card ul{list-style:none;padding:0;}
-  .record-card li{font-size:16px;line-height:1.7;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--paper-dark);display:flex;gap:10px;font-weight:400;}
+  .record-card li{font-size:14px;line-height:1.65;color:var(--ink-mid);padding:8px 0;border-bottom:1px solid var(--paper-dark);display:flex;gap:10px;font-weight:300;}
   .record-card li::before{content:'▸';color:var(--ink-light);flex-shrink:0;margin-top:2px;}
   .record-card li.concern::before{content:'✗';color:var(--red);}
   .record-card li.positive::before{content:'✓';color:var(--blue);}
 
   .chat-section{background:var(--ink);padding:60px 40px;}
   .chat-section h2{font-family:'Libre Baskerville',serif;font-size:28px;color:var(--paper);margin-bottom:8px;}
-  .chat-section p{font-size:17px;color:rgba(245,242,235,0.85);margin-bottom:32px;font-weight:400;}
+  .chat-section p{font-size:15px;color:rgba(245,242,235,0.6);margin-bottom:32px;font-weight:300;}
   .chat-wrap{max-width:680px;}
   .chat-box{background:#12120f;border:1px solid rgba(200,196,184,0.15);border-radius:4px;overflow:hidden;}
   .chat-hdr{background:rgba(255,255,255,0.04);padding:14px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(200,196,184,0.1);font-family:'Courier Prime',monospace;font-size:12px;color:var(--rule);letter-spacing:0.08em;}
@@ -96,8 +96,8 @@
   .cm{display:flex;gap:8px;animation:fadeUp 0.3s ease;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .cm.user{flex-direction:row-reverse;}
-  .cm-bubble{max-width:78%;padding:12px 16px;font-size:16px;line-height:1.7;border-radius:3px;}
-  .cm.bot .cm-bubble{background:rgba(255,255,255,0.06);color:rgba(245,242,235,0.92);border:1px solid rgba(200,196,184,0.08);}
+  .cm-bubble{max-width:78%;padding:10px 14px;font-size:13px;line-height:1.6;border-radius:3px;}
+  .cm.bot .cm-bubble{background:rgba(255,255,255,0.06);color:rgba(245,242,235,0.82);border:1px solid rgba(200,196,184,0.08);}
   .cm.user .cm-bubble{background:var(--accent);color:white;}
   .cm-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:2px;}
   .cm.bot .cm-icon{background:rgba(255,255,255,0.08);color:var(--rule);}
@@ -107,10 +107,10 @@
   .td:nth-child(2){animation-delay:0.2s}.td:nth-child(3){animation-delay:0.4s}
   @keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:0.4}30%{transform:translateY(-4px);opacity:0.9}}
   .chat-qr{padding:10px 16px;border-top:1px solid rgba(200,196,184,0.08);display:flex;gap:6px;flex-wrap:wrap;background:rgba(255,255,255,0.02);}
-  .qr{padding:7px 14px;background:transparent;border:1px solid rgba(200,196,184,0.3);border-radius:20px;font-family:'Courier Prime',monospace;font-size:13px;color:rgba(245,242,235,0.75);cursor:pointer;transition:all 0.2s;}
+  .qr{padding:5px 12px;background:transparent;border:1px solid rgba(200,196,184,0.2);border-radius:20px;font-family:'Courier Prime',monospace;font-size:11px;color:rgba(245,242,235,0.55);cursor:pointer;transition:all 0.2s;}
   .qr:hover{border-color:rgba(200,196,184,0.5);color:var(--paper);}
   .chat-input-row{display:flex;border-top:1px solid rgba(200,196,184,0.1);}
-  .ci{flex:1;padding:14px 16px;background:transparent;border:none;outline:none;font-family:'Source Sans 3',sans-serif;font-size:16px;color:var(--paper);caret-color:var(--accent);}
+  .ci{flex:1;padding:14px 16px;background:transparent;border:none;outline:none;font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--paper);caret-color:var(--accent);}
   .ci::placeholder{color:rgba(245,242,235,0.25);}
   .cs{padding:12px 16px;background:var(--accent);border:none;cursor:pointer;color:white;font-size:14px;transition:background 0.2s;}
   .cs:hover{background:var(--blue);}
@@ -118,11 +118,42 @@
   .sources-section{background:var(--paper-dark);padding:40px;border-top:2px solid var(--ink);}
   .sources-section h3{font-family:'Libre Baskerville',serif;font-size:16px;margin-bottom:16px;color:var(--ink);}
   .source-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
-  .source-item{font-size:14px;font-family:'Courier Prime',monospace;color:var(--ink-mid);padding:8px 12px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--accent);}
+  .source-item{font-size:12px;font-family:'Courier Prime',monospace;color:var(--ink-light);padding:8px 12px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--accent);}
   .source-item a{color:var(--accent);text-decoration:none;}
   .source-item a:hover{text-decoration:underline;}
   footer{background:var(--ink);padding:32px 40px;text-align:center;}
-  .footer-disc{font-family:'Courier Prime',monospace;font-size:13px;color:rgba(245,242,235,0.5);line-height:1.8;max-width:700px;margin:0 auto;}
+  .rrn{background:var(--ink);border-top:3px solid var(--amber);padding:64px 40px;}
+  .rrn-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  @media(max-width:700px){.rrn-wrap{grid-template-columns:1fr;gap:36px;}}
+  .rrn-head{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--paper);margin-bottom:14px;line-height:1.25;}
+  .rrn-body{font-size:16px;line-height:1.75;color:rgba(245,242,235,0.7);margin-bottom:12px;}
+  .rrn-feat{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px;}
+  .rrn-bullet{color:var(--amber);font-size:14px;margin-top:2px;flex-shrink:0;}
+  .rrn-feat span{font-size:15px;color:rgba(245,242,235,0.75);line-height:1.6;}
+  .rrn-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,158,79,0.2);border-radius:4px;padding:28px 24px;}
+  .rrn-card h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--paper);margin-bottom:4px;}
+  .rrn-tagline{font-family:'Courier Prime',monospace;font-size:11px;color:rgba(245,242,235,0.4);letter-spacing:0.06em;margin-bottom:20px;display:block;}
+  .rrn-fields{display:flex;flex-direction:column;gap:12px;}
+  .rrn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media(max-width:500px){.rrn-row{grid-template-columns:1fr;}}
+  .rrn-f{display:flex;flex-direction:column;gap:4px;}
+  .rrn-f label{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(196,158,79,0.7);}
+  .rrn-f input{padding:10px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:2px;font-family:'Playfair Display',serif;font-size:14px;color:var(--paper);outline:none;transition:border-color 0.2s;}
+  .rrn-f input:focus{border-color:var(--amber);}
+  .rrn-f input::placeholder{color:rgba(245,242,235,0.2);}
+  .rrn-chks{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+  .rrn-chk{display:flex;align-items:flex-start;gap:10px;cursor:pointer;}
+  .rrn-chk input[type=checkbox]{width:16px;height:16px;margin-top:2px;accent-color:var(--amber);flex-shrink:0;}
+  .rrn-chk-txt{font-size:13px;line-height:1.55;color:rgba(245,242,235,0.65);}
+  .rrn-chk-txt strong{color:var(--amber);display:block;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:0.08em;margin-bottom:1px;}
+  .rrn-btn{width:100%;margin-top:16px;padding:14px;background:var(--amber);border:none;border-radius:2px;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#1a1a14;cursor:pointer;transition:opacity 0.2s;}
+  .rrn-btn:hover{opacity:0.88;}
+  .rrn-ok{display:none;text-align:center;padding:20px 12px;}
+  .rrn-ok-icon{font-size:32px;margin-bottom:10px;}
+  .rrn-ok h4{font-family:'Playfair Display',serif;font-size:20px;color:var(--amber);margin-bottom:8px;}
+  .rrn-ok p{font-size:14px;color:rgba(245,242,235,0.65);line-height:1.7;}
+  .rrn-disc{font-family:'Courier Prime',monospace;font-size:10px;color:rgba(245,242,235,0.22);text-align:center;margin-top:14px;line-height:1.7;}
+  .footer-disc{font-family:'Courier Prime',monospace;font-size:11px;color:rgba(245,242,235,0.3);line-height:1.8;max-width:700px;margin:0 auto;}
   @media(max-width:640px){.masthead-top,.masthead-main,.page-inner{padding-left:20px;padding-right:20px;}.masthead-nav{flex-wrap:wrap;}section{padding:40px 0;}}
 </style>
 </head>
@@ -146,6 +177,7 @@
     <a href="#record">The Record</a>
     <a href="#ask">Ask Questions</a>
     <a href="#vote">How to Vote</a>
+    <a href="#network">Join Network</a>
   </nav>
 </header>
 
@@ -372,6 +404,48 @@
   </div>
 </div>
 
+<!-- RAPID RESPONSE NETWORK -->
+<section class="rrn" id="network">
+  <div class="rrn-wrap">
+    <div>
+      <div class="rrn-head">Stay Informed. Make Your Voice Heard.</div>
+      <p class="rrn-body">This voter guide presents the documented record. But the race doesn't end here — join Carroll County residents who want to stay informed and help spread the facts.</p>
+      <p class="rrn-body">When something significant happens — a new document, a development in the race, a Carroll County voter blocked for asking a factual question — you'll hear about it first.</p>
+      <div class="rrn-feat"><div class="rrn-bullet">▸</div><span>Instant alerts when we post breaking content</span></div>
+      <div class="rrn-feat"><div class="rrn-bullet">▸</div><span>MPIA document drops sent to you the moment they arrive</span></div>
+      <div class="rrn-feat"><div class="rrn-bullet">▸</div><span>Block tracker updates — accountability in real time</span></div>
+      <div class="rrn-feat"><div class="rrn-bullet">▸</div><span>Share what matters with your Carroll County neighbors</span></div>
+    </div>
+    <div>
+      <div class="rrn-card">
+        <h3>Join the Rapid Response Network</h3>
+        <span class="rrn-tagline">Carroll County residents only · Free · Unsubscribe anytime</span>
+        <form class="rrn-fields" id="rrnForm2" onsubmit="handleRRN2(event)">
+          <div class="rrn-row">
+            <div class="rrn-f"><label>First Name</label><input type="text" id="rrn2First" placeholder="Jane" required></div>
+            <div class="rrn-f"><label>Last Name</label><input type="text" id="rrn2Last" placeholder="Smith" required></div>
+          </div>
+          <div class="rrn-f"><label>Email Address</label><input type="email" id="rrn2Email" placeholder="jane@example.com" required></div>
+          <div class="rrn-f"><label>Mobile Phone (optional — for text alerts)</label><input type="tel" id="rrn2Phone" placeholder="(410) 555-0100"></div>
+          <div class="rrn-f"><label>Carroll County City or Town</label><input type="text" id="rrn2City" placeholder="Westminster, Hampstead, Eldersburg..." required></div>
+          <div class="rrn-chks">
+            <label class="rrn-chk"><input type="checkbox" checked><div class="rrn-chk-txt"><strong>Email Updates</strong>Get notified when we post something significant.</div></label>
+            <label class="rrn-chk"><input type="checkbox"><div class="rrn-chk-txt"><strong>Text Alerts — Rapid Response Network</strong>Breaking updates by text. Reserved for the most time-sensitive content.</div></label>
+            <label class="rrn-chk"><input type="checkbox" checked><div class="rrn-chk-txt"><strong>I am a Carroll County registered voter</strong></div></label>
+          </div>
+          <button type="submit" class="rrn-btn">Join the Network →</button>
+        </form>
+        <div class="rrn-ok" id="rrnOk2">
+          <div class="rrn-ok-icon">✓</div>
+          <h4>You're In.</h4>
+          <p>Welcome to the Carroll County Rapid Response Network. You'll hear from us when it matters.</p>
+        </div>
+        <p class="rrn-disc">Carroll County Small Businesses PAC · We never sell your information · Unsubscribe anytime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p class="footer-disc">Paid for by Carroll County Small Businesses PAC. Not authorized by any candidate or candidate's committee.<br>This site presents factual, sourced information for voter education. All documented claims are sourced above.<br>Carroll County Small Businesses PAC · 2026</p>
 </footer>
@@ -408,6 +482,7 @@ function showTyping(){const c=document.getElementById('chatMsgs');const d=docume
 function removeTyping(){const e=document.getElementById('typing');if(e)e.remove();}
 async function sendChat(){const i=document.getElementById('chatIn');const t=i.value.trim();if(!t)return;i.value='';document.getElementById('chatQR').style.display='none';addMsg('user',t);showTyping();try{const r=await callAI(t);removeTyping();addMsg('bot',r);}catch(e){removeTyping();addMsg('bot','Connection error. Please try again.');}}
 function sq(t){document.getElementById('chatIn').value=t;sendChat();}
+function handleRRN2(e){e.preventDefault();const data={firstName:document.getElementById('rrn2First').value,lastName:document.getElementById('rrn2Last').value,email:document.getElementById('rrn2Email').value,phone:document.getElementById('rrn2Phone').value,city:document.getElementById('rrn2City').value,source:'carrollcountyvotes2026.com',timestamp:new Date().toISOString()};fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});document.getElementById('rrnForm2').style.display='none';document.getElementById('rrnOk2').style.display='block';}
 </script>
 </body>
 </html>
