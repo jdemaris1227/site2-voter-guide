@@ -598,7 +598,30 @@ function sq(t, isWidget) {
   document.getElementById(inputId).value = t;
   sendChat(isWidget);
 }
-function handleRRN2(e){e.preventDefault();const data={firstName:document.getElementById('rrn2First').value,lastName:document.getElementById('rrn2Last').value,email:document.getElementById('rrn2Email').value,phone:document.getElementById('rrn2Phone').value,city:document.getElementById('rrn2City').value,source:'carrollcountyvotes2026.com',timestamp:new Date().toISOString()};fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(()=>{});document.getElementById('rrnForm2').style.display='none';document.getElementById('rrnOk2').style.display='block';}
+function handleRRN2(e) {
+  e.preventDefault();
+  const f = e.target;
+  const checks = f.querySelectorAll('input[type=checkbox]');
+  const data = {
+    firstName: document.getElementById('rrn2First').value,
+    lastName: document.getElementById('rrn2Last').value,
+    email: document.getElementById('rrn2Email').value,
+    phone: document.getElementById('rrn2Phone').value,
+    city: document.getElementById('rrn2City').value,
+    optEmail: checks[0]?.checked || false,
+    optText: checks[1]?.checked || false,
+    optVoter: checks[2]?.checked || false,
+    source: 'site2-voter-guide',
+    timestamp: new Date().toISOString()
+  };
+  fetch('/api/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).catch(() => {});
+  document.getElementById('rrnForm2').style.display = 'none';
+  document.getElementById('rrnOk2').style.display = 'block';
+}
 </script>
 </body>
 </html>
