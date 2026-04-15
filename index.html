@@ -83,6 +83,42 @@
   .record-card li.concern::before{content:'✗';color:var(--red);}
   .record-card li.positive::before{content:'✓';color:var(--blue);}
 
+  .stats-band { background:var(--ink); padding:40px; text-align:center; }
+  .stats-row { display:flex; justify-content:center; gap:60px; flex-wrap:wrap; margin-bottom:12px; }
+  .stat-item { text-align:center; }
+  .stat-item strong { display:block; font-family:'Libre Baskerville',serif; font-size:42px; font-weight:700; color:var(--paper); line-height:1; margin-bottom:6px; }
+  .stat-item span { font-family:'Courier Prime',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(245,242,235,0.6); display:block; max-width:180px; }
+  .stats-band-sub { font-family:'Source Sans 3',sans-serif; font-size:14px; color:rgba(245,242,235,0.5); margin-top:12px; font-weight:300; }
+  .stats-band-source { font-family:'Courier Prime',monospace; font-size:9px; color:rgba(245,242,235,0.25); margin-top:8px; }
+
+  .mprp-section { background:var(--paper-dark); padding:60px 0; }
+  .mprp-explainer { max-width:720px; }
+  .mprp-explainer h2 { font-family:'Libre Baskerville',serif; font-size:24px; font-weight:700; color:var(--ink); margin-bottom:12px; }
+  .mprp-explainer p { font-size:15px; color:var(--ink-mid); line-height:1.75; font-weight:300; margin-bottom:16px; }
+  .mprp-explainer p strong { color:var(--ink); font-weight:600; }
+  .mprp-facts-list { list-style:none; margin:20px 0; }
+  .mprp-facts-list li { font-size:14px; color:var(--ink-mid); line-height:1.7; padding:8px 0; border-bottom:1px solid var(--rule); display:flex; align-items:flex-start; gap:10px; font-weight:300; }
+  .mprp-facts-list li:last-child { border:none; }
+  .mprp-facts-list li::before { content:'\2022'; color:var(--accent); flex-shrink:0; font-weight:700; }
+  .mprp-positions { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:24px; }
+  .mprp-pos { background:var(--white); border:1px solid var(--rule); padding:20px; }
+  .mprp-pos h4 { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; margin-bottom:8px; }
+  .mprp-pos.challenger h4 { color:var(--blue); }
+  .mprp-pos.incumbent h4 { color:var(--red); }
+  .mprp-pos p { font-size:14px; color:var(--ink-mid); line-height:1.7; font-weight:300; }
+  .mprp-source { font-family:'Courier Prime',monospace; font-size:9px; color:var(--ink-light); margin-top:16px; }
+
+  .case-section { background:var(--white); padding:60px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+  .case-section h2 { font-family:'Libre Baskerville',serif; font-size:24px; font-weight:700; color:var(--ink); margin-bottom:12px; }
+  .case-narrative { max-width:720px; }
+  .case-narrative p { font-size:15px; color:var(--ink-mid); line-height:1.75; font-weight:300; margin-bottom:16px; }
+  .case-narrative p strong { color:var(--ink); font-weight:600; }
+  .case-verdict { background:var(--ink); padding:24px 32px; text-align:center; max-width:720px; margin:24px 0; }
+  .case-verdict .cv-label { font-family:'Courier Prime',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(245,242,235,0.5); margin-bottom:6px; }
+  .case-verdict .cv-text { font-family:'Libre Baskerville',serif; font-size:32px; font-weight:700; color:var(--paper); }
+  .case-verdict .cv-sub { font-size:13px; color:rgba(245,242,235,0.6); margin-top:6px; font-weight:300; }
+  .case-source { font-family:'Courier Prime',monospace; font-size:9px; color:var(--ink-light); margin-top:16px; }
+
   .chat-section{background:var(--ink);padding:60px 40px;}
   .chat-section h2{font-family:'Libre Baskerville',serif;font-size:28px;color:var(--paper);margin-bottom:8px;}
   .chat-section p{font-size:15px;color:rgba(245,242,235,0.6);margin-bottom:32px;font-weight:300;}
@@ -190,7 +226,7 @@
   .msg-icon { width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; margin-top:2px; }
   .msg.bot .msg-icon { background:rgba(255,255,255,0.08); color:var(--rule); }
   .msg.user .msg-icon { background:rgba(45,90,142,0.4); color:var(--rule); }
-  @media(max-width:768px) { .chat-widget-panel { width:calc(100vw - 24px); right:12px; bottom:86px; max-height:70vh; } .chat-widget-btn { bottom:16px; right:16px; } }
+  @media(max-width:768px) { .chat-widget-panel { width:calc(100vw - 24px); right:12px; bottom:86px; max-height:70vh; } .chat-widget-btn { bottom:16px; right:16px; } .stats-row { gap:32px; } .stat-item strong { font-size:32px; } .mprp-positions { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -211,6 +247,8 @@
     <a href="#issues">Issue by Issue</a>
     <a href="#scandal">The Buenger Scandal</a>
     <a href="#record">The Record</a>
+    <a href="#mprp">MPRP</a>
+    <a href="#case">The Case</a>
     <a href="#report">Report</a>
     <a href="#ask">Ask Questions</a>
     <a href="#vote">How to Vote</a>
@@ -234,7 +272,7 @@
         <div class="cand-name">George Psoras</div>
         <div class="cand-party">Republican Challenger · Carroll County State's Attorney</div>
         <div class="cand-tagline">"Making Crime Illegal Again in Carroll County — justice for victims, accountability for all."</div>
-        <p class="cand-bio">George Psoras is challenging the incumbent with a platform centered on prosecutorial integrity, community safety, and restoring public trust. He has committed to full Brady Rule compliance, relentless prosecution of violent offenders, tackling the opioid epidemic, and supporting the transparency reforms Culver has opposed.</p>
+        <p class="cand-bio">George Psoras is a 38-year Carroll County trial attorney (Hampstead, MD) challenging the incumbent. Magna Cum Laude graduate of University of Baltimore School of Law. 2026 Martindale-Hubbell Client Champion Award. Has tried cases in virtually every Maryland court. His platform centers on prosecutorial integrity, community safety, and full Brady Rule compliance. Running with Chief Deputy candidate <strong>Joe Murtha</strong> — AV Preeminent rated, Super Lawyer, John Adams Award recipient, Fellow of the American College of Trial Lawyers, who won acquittals in the Linda Tripp case and Freddie Gray Officer Porter case.</p>
       </div>
       <div class="compare-divider"><div class="compare-divider-line"></div></div>
       <div class="candidate-col incumbent">
@@ -248,6 +286,16 @@
     </div>
   </div>
 </section>
+
+<div class="stats-band">
+  <div class="stats-row">
+    <div class="stat-item"><strong>173%</strong><span>Crime rate increase in Carroll County, 2021-2022</span></div>
+    <div class="stat-item"><strong>$991</strong><span>Estimated annual cost of crime per household</span></div>
+    <div class="stat-item"><strong>Every 2 hrs</strong><span>Frequency of reported crime in Carroll County</span></div>
+  </div>
+  <p class="stats-band-sub">Carroll County voters should consider these trends when evaluating candidates for State's Attorney.</p>
+  <p class="stats-band-source">Sources: FBI NIBRS Data 2021-2022 · CrimeGrade.org 2025</p>
+</div>
 
 <hr class="section-rule">
 
@@ -286,6 +334,18 @@
       <div class="issue-topic">Victim Support</div>
       <div class="issue-cell">Explicitly commits to treating victims and witnesses with compassion and empowering Carroll County communities in public safety efforts.<br><span class="verdict verdict-positive">Explicit Commitment</span></div>
       <div class="issue-cell">No comparable public commitment to victim advocacy or community safety empowerment as a platform priority.<br><span class="verdict verdict-neutral">No Public Commitment</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Self-Defense & Property Rights</div>
+      <div class="issue-cell">Defended a Carroll County store owner who was charged with assault after defending himself during a break-in. The case went to trial and the store owner was found <strong>NOT GUILTY</strong> by Judge Stansfield in Carroll County Circuit Court.<br><span class="verdict verdict-positive">Defended the Victim — Won</span></div>
+      <div class="issue-cell">The Carroll County State's Attorney's office charged the store owner with assault after two individuals broke into his business. The community objected to the prosecution. The case resulted in a <strong>NOT GUILTY</strong> verdict — the court did not agree with the State's Attorney's office.<br><span class="verdict verdict-negative">Prosecuted the Victim — Lost</span></div>
+    </div>
+
+    <div class="issue-row">
+      <div class="issue-topic">Property Rights / MPRP</div>
+      <div class="issue-cell">Has publicly opposed the Maryland Piedmont Reliability Project (MPRP), which would allow a New Jersey corporation (PSEG) to use eminent domain to cut a 150-foot-wide path through Carroll County properties. Opposes forced surveyor access.<br><span class="verdict verdict-positive">Opposes MPRP</span></div>
+      <div class="issue-cell">Has not taken a public position on MPRP or the eminent domain concerns facing Carroll County property owners. Carroll County Commissioners have officially opposed the project.<br><span class="verdict verdict-neutral">No Stated Position</span></div>
     </div>
   </div>
 </section>
@@ -368,6 +428,54 @@
           <li class="positive">Pledges publicly accountable prosecutorial decision-making</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section class="mprp-section" id="mprp">
+  <div class="page-inner">
+    <div class="section-label">Emerging Issue</div>
+    <div class="mprp-explainer">
+      <h2>Maryland Piedmont Reliability Project (MPRP)</h2>
+      <p>The MPRP is a proposed transmission line project by PSEG, a New Jersey-based utility corporation, that would cut a <strong>150-foot-wide, 70-mile path</strong> through Baltimore, Carroll, and Frederick Counties. The project has drawn opposition from local officials and property owners.</p>
+      <ul class="mprp-facts-list">
+        <li>400+ properties potentially affected — farms, homes, preserved forests, and businesses</li>
+        <li>PSEG has filed court motions seeking access to private land for surveying</li>
+        <li>Property owners who refuse access may face eminent domain proceedings</li>
+        <li>Carroll County Board of Commissioners has officially opposed the project</li>
+      </ul>
+    </div>
+    <div class="mprp-positions">
+      <div class="mprp-pos challenger">
+        <h4>George Psoras</h4>
+        <p>Has publicly opposed MPRP. States he will fight eminent domain for corporate gain and opposes forced surveyor access to private property without owner consent.</p>
+      </div>
+      <div class="mprp-pos incumbent">
+        <h4>Allan Culver Jr.</h4>
+        <p>Has not taken a public position on MPRP or the eminent domain concerns facing Carroll County property owners as of the date of this publication.</p>
+      </div>
+    </div>
+    <p class="mprp-source">Sources: Carroll County Board of Commissioners Resolution · WMAR2 News (April 2025) · Baltimore Sun</p>
+  </div>
+</section>
+
+<section class="case-section" id="case">
+  <div class="page-inner">
+    <div class="section-label">Court Record</div>
+    <div class="case-narrative">
+      <h2>The Store Owner Case — Carroll County Circuit Court</h2>
+      <p>Two individuals broke into a Carroll County small business. The store owner confronted them and defended his property. The Carroll County State's Attorney's office subsequently <strong>charged the store owner with assault.</strong></p>
+      <p>Community members objected to the prosecution, calling on the office to drop the charges. The office proceeded to trial.</p>
+      <p>George Psoras represented the store owner as defense counsel. The case was tried before Judge Stansfield in Carroll County Circuit Court.</p>
+      <div class="case-verdict">
+        <div class="cv-label">Verdict — Carroll County Circuit Court</div>
+        <div class="cv-text">NOT GUILTY</div>
+        <div class="cv-sub">Judge Stansfield, Carroll County Circuit Court</div>
+      </div>
+      <p>Voters may consider this case when evaluating each candidate's approach to self-defense, property rights, and prosecutorial discretion.</p>
+      <p class="case-source">Source: Carroll County Circuit Court records, Judge Stansfield</p>
     </div>
   </div>
 </section>
